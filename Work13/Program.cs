@@ -4,21 +4,15 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int a = new Random().Next(1,1000);
-Console.WriteLine($"Рандомное число: {a}");
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+string numA = Convert.ToString(num);
 
-if (a > 99)
+if (numA.Length > 2)
 {
-    while (a > 1000)
-    {
-       a = a / 10;
-    Console.WriteLine($"Рандомное число в процессе while: {a}"); 
-    }
+  Console.WriteLine("третья цифра -> " + numA[2]);
 }
 else
 {
-    Console.WriteLine($"Третьей цифры нет: {a}");
+  Console.WriteLine("Третьей цифры нет");
 }
-Console.WriteLine($"Рандомное число в процессе while: {a}");
-int result = a % 10;
-Console.WriteLine($"Третья цифра рандомного числа: {result}");
