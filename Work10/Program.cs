@@ -4,8 +4,8 @@
 // 782 -> 8
 // 918 -> 1
 
-int a = new Random().Next(100, 1000);
-Console.WriteLine($"Рандомное число: {a}");
+Console.WriteLine("Введите трехзначное число: ");
+int a = Convert.ToInt32(Console.ReadLine());
 int b = a / 10;
 int result = b % 10;
 Console.WriteLine(result);
