@@ -22,6 +22,7 @@ for (int j = 0; j < numbers.Length; j++)
         }
 }
 
+Console.WriteLine();
 Console.WriteLine($"Максимальное значение = {max}, минимальное значение = {min}");
 Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
 
@@ -34,11 +35,7 @@ void FillArrayRandomNumbers(double[] numbers)
 }
 void PrintArray(double[] numbers)
 {
-    Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write(numbers[i] + " ; ");
-        }
-    Console.Write("]");
-    Console.WriteLine();
-}
+  Console.Write($"[{numbers[0]}");
+  for (int i = 1; i < numbers.Length; i++) Console.Write($"; {numbers[i]}");
+  Console.Write("]");
+} 
